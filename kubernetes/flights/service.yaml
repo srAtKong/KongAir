@@ -7,11 +7,10 @@ metadata:
   name: kongair-flights-service
 spec:
   ports:
-  - name: 8080-8080
+  - name: kongair-flights-ports
     port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
     app: kongair-flights
   type: ClusterIP
-status:

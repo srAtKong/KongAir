@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: kongair-routes
+  labels:
+    app: kongair-routes-deployment
+  name: kongair-routes
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kongair-routes
+  template:
+    metadata:
+      labels:
+        app: kongair-routes
+    spec:
+      containers:
+      - image: kongedu/kongair-routes
+        name: kongair-routes-deployment
+        ports:
+        - containerPort: 8081
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+status: {}
