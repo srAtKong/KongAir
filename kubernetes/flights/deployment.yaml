@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: kongair-flights
+  labels:
+    app: kongair-flights-deployment
+  name: kongair-flights
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kongair-flights
+  template:
+    metadata:
+      labels:
+        app: kongair-flights
+    spec:
+      containers:
+      - image: kongedu/kongair-flights
+        name: kongair-flights-deployment
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+status: {}
