@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: kongair-bookings
+  labels:
+    app: kongair-bookings-deployment
+  name: kongair-bookings
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kongair-bookings
+  template:
+    metadata:
+      labels:
+        app: kongair-bookings
+    spec:
+      containers:
+      - image: kongedu/kongair-bookings
+        name: kongair-bookings-deployment
+        ports:
+        - containerPort: 8082
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+status: {}
