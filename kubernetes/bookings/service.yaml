@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: kongair-flights
+  namespace: kongair
   labels:
     app: kongair-flights-service
   name: kongair-flights-service

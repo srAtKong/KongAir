@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: kongair
+  labels:
+    app: kongair-experience-service
+  name: kongair-experience-service
+spec:
+  ports:
+  - name: kongair-experience-ports
+    port: 8084
+    protocol: TCP
+    targetPort: 8084
+  selector:
+    app: kongair-experience
+  type: ClusterIP

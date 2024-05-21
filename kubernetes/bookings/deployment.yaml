@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: kongair-bookings
+  namespace: kongair
   labels:
     app: kongair-bookings-deployment
   name: kongair-bookings

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: kongair-customers
+  namespace: kongair
   labels:
     app: kongair-customers-deployment
   name: kongair-customers

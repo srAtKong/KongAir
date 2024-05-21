@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   namespace: kongair
   labels:
-    app: kongair-flights-deployment
-  name: kongair-flights
+    app: kongair-experience-deployment
+  name: kongair-experience
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: kongair-flights
+      app: kongair-experience
   template:
     metadata:
       labels:
-        app: kongair-flights
+        app: kongair-experience
     spec:
       containers:
-      - image: kongedu/kongair-flights
-        name: kongair-flights-deployment
+      - image: kongedu/kongair-experience
+        name: kongair-experience-deployment
         ports:
-        - containerPort: 8080
+        - containerPort: 8084
         resources:
           requests:
             memory: "64Mi"

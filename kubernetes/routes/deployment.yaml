@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: kongair-routes
+  namespace: kongair
   labels:
     app: kongair-routes-deployment
   name: kongair-routes
