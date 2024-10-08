@@ -10,7 +10,7 @@ spec:
   - name: kongair-experience-ports
     port: 8084
     protocol: TCP
-    targetPort: 8084
+    targetPort: 4000
   selector:
     app: kongair-experience
   type: ClusterIP

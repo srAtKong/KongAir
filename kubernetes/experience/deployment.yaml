@@ -19,7 +19,7 @@ spec:
       - image: kongedu/kongair-experience
         name: kongair-experience-deployment
         ports:
-        - containerPort: 8084
+        - containerPort: 4000
         resources:
           requests:
             memory: "32Mi"

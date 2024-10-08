@@ -19,7 +19,7 @@ spec:
       - image: kongedu/kongair-customers
         name: kongair-customers-deployment
         ports:
-        - containerPort: 8083
+        - containerPort: 3000
         resources:
           requests:
             memory: "32Mi"

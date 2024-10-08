@@ -19,7 +19,7 @@ spec:
       - image: kongedu/kongair-bookings
         name: kongair-bookings-deployment
         ports:
-        - containerPort: 8082
+        - containerPort: 3000
         resources:
           requests:
             memory: "32Mi"
