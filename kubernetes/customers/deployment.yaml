@@ -3,28 +3,28 @@ kind: Deployment
 metadata:
   namespace: kongair
   labels:
-    app: kongair-flights-deployment
-  name: kongair-flights
+    app: kongair-customers-deployment
+  name: kongair-customers
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: kongair-flights
+      app: kongair-customers
   template:
     metadata:
       labels:
-        app: kongair-flights
+        app: kongair-customers
     spec:
       containers:
-      - image: kongedu/kongair-flights
-        name: kongair-flights-deployment
+      - image: kongedu/kongair-customers
+        name: kongair-customers-deployment
         ports:
-        - containerPort: 8080
+        - containerPort: 8083
         resources:
           requests:
+            memory: "32Mi"
+            cpu: "125m"
+          limits:
             memory: "64Mi"
             cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
 status: {}

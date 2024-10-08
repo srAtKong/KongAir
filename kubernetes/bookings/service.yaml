@@ -3,14 +3,14 @@ kind: Service
 metadata:
   namespace: kongair
   labels:
-    app: kongair-flights-service
-  name: kongair-flights-service
+    app: kongair-bookings-service
+  name: kongair-bookings-service
 spec:
   ports:
-  - name: kongair-flights-ports
+  - name: kongair-bookings-ports
     port: 8082
     protocol: TCP
     targetPort: 8082
   selector:
-    app: kongair-flights
+    app: kongair-bookings
   type: ClusterIP
