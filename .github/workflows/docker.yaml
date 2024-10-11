@@ -43,4 +43,5 @@ jobs:
           context: "${{ matrix.app.dir }}/${{ matrix.app.name }}"
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: kongedu/kongair-${{ matrix.app.name }}:latest
+          # tags: kongedu/kongair-${{ matrix.app.name }}:latest
+          tags: shrikanthraj/kongair-${{ matrix.app.name }}:latest
