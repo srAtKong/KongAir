@@ -285,6 +285,7 @@ services:
   - config:
       limit:
       - 500
+      strategy: local
       sync_rate: -1
       window_size:
       - 120
