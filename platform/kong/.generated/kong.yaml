@@ -228,7 +228,7 @@ services:
   path: /
   plugins:
   - _config: default-jwt
-    enabled: true
+    enabled: false
     name: jwt
     tags:
     - platform-repo-managed
