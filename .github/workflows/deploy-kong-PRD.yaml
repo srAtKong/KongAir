@@ -39,4 +39,5 @@ jobs:
           deck sync --select-tag platform-repo-managed \
               -s PRD/kong/kong.yaml \
               --konnect-control-plane-name shrikanth-cp \
-              --konnect-token ${{ secrets.KONNECT_PAT }}
+              --konnect-token ${{ secrets.KONNECT_PAT }} \
+              --konnect-addr https://au.api.konghq.com 
