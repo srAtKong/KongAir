@@ -18,6 +18,7 @@ services:
         window_size:
         - 120
         sync_rate: -1
+        strategy: local
     port: 8084
     protocol: http
     routes:
